@@ -1,0 +1,15 @@
+syntax = "proto3";
+package myblockchain.pow;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/username/myblockchain/x/pow/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "myblockchain/x/pow/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

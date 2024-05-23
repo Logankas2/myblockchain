@@ -1,0 +1,17 @@
+syntax = "proto3";
+package myblockchain.myprojectpow;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "myblockchain/myprojectpow/params.proto";
+
+option go_package = "github.com/username/myblockchain/x/myprojectpow/types";
+
+// GenesisState defines the myprojectpow module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
